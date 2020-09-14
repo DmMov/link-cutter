@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "jwtSecretDmMov",
+  "mongoUri": "mongodb+srv://db_dmmov:db_dmmov@cluster0.sy7cr.gcp.mongodb.net/linkerdb?retryWrites=true&w=majority"
+}

@@ -1,0 +1,26 @@
+.form {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  justify-self: center;
+  position: relative;
+
+  &__title {
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+  }
+
+  &__submitBtn {
+    justify-self: center;
+  }
+
+  .spinner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#ffffff, .5);
+  }
+}

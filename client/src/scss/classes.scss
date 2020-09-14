@@ -1,0 +1,40 @@
+@import "./vars";
+@import "./mixins.scss";
+
+.btn {
+  display: block;
+  padding: 1.25rem;
+  font-size: .9rem;
+  font-weight: 600;
+  border: 3px solid currentColor;
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.page {
+  align-self: start;
+}
+
+.digit {
+  font-family: 'Muli', sans-serif;
+}
+
+.withOverlay {
+  position: relative;
+
+  &::before {
+    content: '';
+    @include stretch(absolute);
+    background: rgba($black, .75);
+  }
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.imageContainer {
+  display: flex;
+  width: 100%;
+
+  .image {
+    vertical-align: middle;
+    object-fit: cover;
+    width: 100%;
+  }
+}

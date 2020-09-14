@@ -1,0 +1,13 @@
+.authPage {
+  .toggleFormBtnWrap {
+    display: grid;
+    justify-content: end;
+    padding: 1rem;
+    max-width: 30rem;
+    margin: 0 auto;
+
+    .toggleFormBtn {
+      border: none;
+    }
+  }
+}
