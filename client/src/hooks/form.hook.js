@@ -68,5 +68,5 @@ export const useForm = (initialState, initialFields) =>  {
     })
   );
 
-  return { form, fields: buildFields(), onChange, reset, validate, setErrors };
+  return { form, fields: buildFields(), reset, validate, setErrors };
 }

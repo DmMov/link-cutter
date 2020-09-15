@@ -1,0 +1,55 @@
+@import "scss/vars";
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .logo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+
+    &__img {
+      height: 1.25rem;
+      margin-right: 0.5rem;
+    }
+
+    &__text {
+      text-transform: capitalize;
+      font-weight: 900;
+
+      &.lt2 {
+        color: $primary;
+      }
+    }
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    justify-content: end;
+    padding: 0 4rem;
+
+    .link {
+      &.active {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .logoutBtn {
+    color: $gray;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
