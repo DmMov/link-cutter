@@ -9,7 +9,7 @@ import { Spinner } from '../Spinner/Spinner';
 // * Sass
 import './Form.scss';
 
-export const Form = ({ onSubmit, classes, title, buttonText, fields, spin }) =>
+export const Form = ({ onSubmit, classes, title, buttonText = 'submit', fields, spin }) =>
   <form onSubmit={onSubmit} className={classnames('form', classes)}>
     {spin && <Spinner />}
     {title && <h2 className="form__title">{title}</h2>}
@@ -33,6 +33,6 @@ Form.propTypes = {
   classes: arrayOf(string),
   onSubmit: func.isRequired,
   title: string,
-  buttonText: string.isRequired,
+  buttonText: string,
   fields: array,
 };

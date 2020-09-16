@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { get } from 'js-cookie';
 import axios from 'axios';
 
 export const useHttp = () => {
@@ -9,7 +8,6 @@ export const useHttp = () => {
   const request = useCallback(async (url, method = 'get', data = null, headers = {}) => {
     setLoading(true)
     try {
-      headers = tokenToHeaders(headers);
       const response = await axios({ url, method, data, headers })
         .then(response => response)
         .catch(error => error.response);
@@ -30,13 +28,4 @@ export const useHttp = () => {
   const clearError = () => useCallback(() => setError(null), []);
 
   return { loading, error, request, clearError };
-}
-
-const tokenToHeaders = headers => {
-  const token = get('token');
-
-  if (token)
-    headers['Authorization'] = `Bearer ${token}`;
-
-  return headers;
 }
