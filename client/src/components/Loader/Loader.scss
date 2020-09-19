@@ -1,0 +1,26 @@
+@import "scss/vars";
+@import "scss/mixins";
+
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.loader {
+  @include stretch(fixed);
+  background-color: #ffffff;
+  z-index: 99;
+
+  &::before {
+    content: '';
+    @include position(absolute, 50%, 0, auto, 0);
+    height: 2px;
+    background-color: $primary;
+    transform: translateX(-100%);
+    animation: loading 1s linear infinite forwards;
+  }
+}

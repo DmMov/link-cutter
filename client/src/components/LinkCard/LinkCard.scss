@@ -1,0 +1,21 @@
+@import "scss/vars";
+
+.linkCard {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 2rem;
+
+  .highlight {
+    color: $primary;
+    font: inherit;
+  }
+
+  .link {
+    color: #518FF5;
+    transition: all .25s linear;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
