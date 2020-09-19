@@ -5,7 +5,7 @@
   grid-template-columns: auto 1fr auto;
   grid-gap: 1rem;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
 
   .logo {
     display: grid;
@@ -32,7 +32,7 @@
     grid-template-columns: auto auto;
     grid-gap: 1rem;
     justify-content: end;
-    padding: 0 4rem;
+    padding: 0 1rem;
 
     .link {
       &.active {
@@ -44,6 +44,7 @@
   }
 
   .logoutBtn {
+    display: block;
     color: $gray;
     border: none;
     padding: 0;
